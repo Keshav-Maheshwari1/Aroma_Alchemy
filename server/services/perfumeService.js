@@ -11,7 +11,6 @@ class PerfumeService {
     try {
       console.log("Fetching all perfumes...");
       const perfumes = await PerfumeModel.find();
-      console.log("Fetched perfumes:", perfumes);
       return perfumes;
     } catch (error) {
       console.error("Error fetching perfumes:", error); // Log the error

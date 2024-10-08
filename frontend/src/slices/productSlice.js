@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // API base URL for products
-const API_URL = "http://localhost:3001/api/perfumes";
+const API_URL = "https://aroma-alchemy.onrender.com/api/perfumes";
 
 // Fetch products from API
 export const fetchProduct = createAsyncThunk(
