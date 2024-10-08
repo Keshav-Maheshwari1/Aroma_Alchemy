@@ -34,7 +34,7 @@ const DeleteProductForm = () => {
             {/* Left part - Uploaded Images */}
             <div className="w-full md:w-1/3 mb-4 md:mb-0">
               <img
-                src={product.image || "default-image.jpg"} // Use product image if available
+                src={product.image || "banner4.jpg"} // Use product image if available
                 alt={product.title}
                 className="w-full h-48 object-cover rounded-lg"
               />

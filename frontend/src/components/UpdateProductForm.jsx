@@ -77,7 +77,7 @@ const UpdateProductForm = () => {
         {/* Product Image */}
         <div className="mb-4">
           <img
-            src={product.image || "default-image.jpg"}
+            src={product.image || "banner1.jpg"}
             alt={product.title}
             className="w-full h-64 object-cover rounded-lg mb-2"
           />

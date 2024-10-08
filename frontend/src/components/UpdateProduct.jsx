@@ -34,7 +34,7 @@ const UpdateProduct = () => {
             {/* Uploaded Images */}
             <div className="flex-shrink-0">
               <img
-                src={product.image || "default-image.jpg"} // Use product image if available
+                src={product.image || "banner4.jpg"} // Use product image if available
                 alt={product.title}
                 className="w-full h-48 object-cover rounded-t-lg"
               />
