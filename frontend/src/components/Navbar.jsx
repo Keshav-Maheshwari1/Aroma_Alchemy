@@ -7,12 +7,15 @@ import { RxCross1 } from "react-icons/rx";
 import { FaUser } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
 import Dropdown from "./Dropdown";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isHamburger, setIsHamburger] = useState(false); // State to manage hover effect
-
+  const navigate = useNavigate();
   const handleHamburger = () => setIsHamburger((prev) => !prev);
-
+  const onClickUserLogo = ()=>{
+    navigate("/user")
+  }
   return (
     <>
       <nav className="border-b-2 border-neutral-400 relative flex justify-between items-center py-2 px-2 sm:px-4 gap-2 ">
@@ -58,7 +61,7 @@ const Navbar = () => {
           <p className="text-base lg:text-lg text-black flex items-center gap-1">
             Address <IoAddOutline className="w-5 h-5 lg:w-6 lg:h-6" />
           </p>
-          <p className="text-base lg:text-lg text-black flex items-center gap-2">
+          <p className="text-base lg:text-lg text-black flex items-center gap-2" onClick={onClickUserLogo}>
             <FaUser className="w-5 h-5 lg:w-6 lg:h-6" /> User
           </p>
           <p className="text-base lg:text-lg text-black flex items-center gap-2">
