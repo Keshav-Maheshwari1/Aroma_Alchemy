@@ -19,17 +19,21 @@ let gfs;
 
 // MongoDB connection
 mongoose
-  .connect(MONGODB_URI)
+  .connect(MONGODB_URI, {
+    serverSelectionTimeoutMS: 50000, // Increase timeout to 50 seconds
+  })
   .then(() => {
-    console.log("MongoDB connected");
-
-    // Set up GridFS bucket after successful connection
+    console.log("MongoDB connected successfully");
     const db = mongoose.connection.db;
     gfs = new GridFSBucket(db, {
-      bucketName: "uploads", // Set bucket name (or customize as needed)
+      bucketName: "uploads",
     });
   })
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+    process.exit(1);
+  });
+
 
 // Routes
 router.use("/api", routes); // Ensure routes are properly defined in routes.js
