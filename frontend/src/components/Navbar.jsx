@@ -61,7 +61,7 @@ const Navbar = () => {
           <p className="text-base lg:text-lg text-black flex items-center gap-1">
             Address <IoAddOutline className="w-5 h-5 lg:w-6 lg:h-6" />
           </p>
-          <p className="text-base lg:text-lg text-black flex items-center gap-2" onClick={onClickUserLogo}>
+          <p className="text-base lg:text-lg text-black flex items-center gap-2 cursor-pointer" onClick={onClickUserLogo}>
             <FaUser className="w-5 h-5 lg:w-6 lg:h-6" /> User
           </p>
           <p className="text-base lg:text-lg text-black flex items-center gap-2">
@@ -78,21 +78,21 @@ const Navbar = () => {
             className="flex flex-col justify-center gap-1 cursor-pointer w-full"
             onClick={handleHamburger}
           >
-            {isHamburger ? <GiHamburgerMenu /> : <RxCross1 />}
+            {isHamburger ?  <RxCross1 /> : <GiHamburgerMenu />}
           </div>
         </div>
       </nav>
 
       {/* Hamburger Menu Content */}
       {isHamburger && (
-        <div className="border-2 border-neutral-400 w-[30%] flex flex-col gap-2 justify-start z-10">
+        <div className="absolute border-2 border-neutral-400 w-[30%] flex flex-col gap-2 justify-start z-10">
           <p className="text-base text-black hover:bg-green-300 w-full px-2">
             Region
           </p>
           <p className="text-base text-black flex items-center w-full hover:bg-green-300 px-2">
             Address <IoAddOutline className="w-4 h-4" />
           </p>
-          <p className="text-base text-black flex w-full items-center gap-1 hover:bg-green-300 px-2">
+          <p className="text-base text-black flex w-full items-center gap-1 hover:bg-green-300 px-2" onClick={onClickUserLogo}>
             <FaUser className="w-4 h-4" /> User
           </p>
         </div>
