@@ -30,6 +30,7 @@
     "nodemon": "^3.1.7"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/gridfs-stream": "^0.5.39",
     "@types/multer-gridfs-storage": "^4.0.8"

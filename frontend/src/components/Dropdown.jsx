@@ -5,10 +5,10 @@ const Dropdown = () => {
       <div
         className={`categories bg-green-400 gap-2 p-2 z-20 `} 
       >
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Category 1</p>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Category 2</p>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Category 3</p>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Category 4</p>
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Rose</p>
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Melon</p>
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Perfume</p>
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black">Aerosol</p>
       </div>
     );
   };
